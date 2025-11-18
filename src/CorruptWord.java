@@ -24,7 +24,7 @@ public class CorruptWord {
         for(int i = 0; i < print.length()-1; i++)
         {
             randomNum = (int) (Math.random() * 3);
-            if(randomNum<3){
+            if(randomNum<2){
                 randomNum = (int) (Math.random() * 7);
                 newString+=symbols.substring(randomNum, randomNum + 1);
             }
