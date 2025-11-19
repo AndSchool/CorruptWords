@@ -21,7 +21,7 @@ public class CorruptWord {
         String newString="";
         String symbols="!@#$%^&*___????";
         int randomNum;
-        for(int i = 0; i < print.length()-1; i++)
+        for(int i = 0; i < print.length(); i++)
         {
             randomNum = (int) (Math.random() * 3);
             if(randomNum<2){
