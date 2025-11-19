@@ -2,7 +2,7 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        CorruptWord weird6 = new CorruptWord("ABCDEFGHIJKLMNOPQRSTUVWX");
+        CorruptWord weird6 = new CorruptWord("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
         System.out.print(weird6.Corrupting());
     }
 }

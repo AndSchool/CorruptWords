@@ -19,17 +19,32 @@ public class CorruptWord {
     public String Corrupting(){
         String print = getWord();
         String newString="";
-        String symbols="!@#$%^&*";
+        String symbols="!@#$%^&*___????";
         int randomNum;
         for(int i = 0; i < print.length()-1; i++)
         {
             randomNum = (int) (Math.random() * 3);
             if(randomNum<2){
-                randomNum = (int) (Math.random() * 7);
+                randomNum = (int) (Math.random() * 13);
                 newString+=symbols.substring(randomNum, randomNum + 1);
+                if (randomNum<1){
+                    for (int x = 0; x < (Math.random() * 4); x++) {
+                        newString+=print.substring(i, i + 1);
+                    }
+                }
+                if (randomNum<2){
+                    newString+=" ";
+                }
+
             }
             else{
-                newString+=print.substring(i, i + 1);
+                randomNum = (int) (Math.random() * 3);
+                if (randomNum<1){
+                    newString+="";
+                }else{
+                    newString+=print.substring(i, i + 1);
+                }
+
             }
 
         }
