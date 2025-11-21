@@ -52,5 +52,22 @@ public class CorruptWord {
         return newString;
 
     }
+    public String Encrypt(){
+        String print = getWord();
+        String newString="";
+        String symbols="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        int randomNum;
+        char currentChar;
+        int currentNum;
+        print=print.toUpperCase();
+        randomNum = (int) (Math.random() * 10);
+        for(int i = 0; i+randomNum < symbols.length(); i++)
+        {
+            currentChar = (print.charAt(i));
 
+        }
+
+        return newString;
+
+    }
 }
