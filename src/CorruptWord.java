@@ -61,12 +61,20 @@ public class CorruptWord {
         int currentNum;
         print=print.toUpperCase();
         randomNum = (int) (Math.random() * 10);
-        for(int i = 0; i+randomNum < symbols.length(); i++)
+        for(int i = 0; i < print.length(); i++)
         {
             currentChar = (print.charAt(i));
+            currentNum = currentChar - 'A' ;
+            if (currentNum+randomNum>25){
+                currentNum = (currentNum+randomNum)-26;
+            }
+            else{
+                currentNum += randomNum;
+            }
 
+            newString+=symbols.charAt(currentNum);
         }
-
+        System.out.println("Key: "+randomNum);
         return newString;
 
     }
