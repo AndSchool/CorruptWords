@@ -5,5 +5,6 @@ public class Main {
         CorruptWord weird6 = new CorruptWord("epicword");
         //it's a word, so it won't take spaces
         System.out.print(weird6.Encrypt());
+        System.out.print(weird6.Decrypt("LWPJDVYK", 7));
     }
 }

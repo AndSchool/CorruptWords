@@ -78,4 +78,27 @@ public class CorruptWord {
         return newString;
 
     }
+    public String Decrypt(String Encrypted, int key){
+        String print = Encrypted;
+        String newString="";
+        String symbols="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        char currentChar;
+        int currentNum;
+        Encrypted=Encrypted.toUpperCase();
+        for(int i = 0; i < print.length(); i++)
+        {
+            currentChar = (print.charAt(i));
+            currentNum = currentChar - 'A' ;
+            if (currentNum-key<0){
+                currentNum = 26+(currentNum-key);
+            }
+            else{
+                currentNum -= key;
+            }
+
+            newString+=symbols.charAt(currentNum);
+        }
+        return newString;
+
+    }
 }
