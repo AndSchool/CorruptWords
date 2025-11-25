@@ -79,12 +79,11 @@ public class CorruptWord {
 
     }
     public String Decrypt(String Encrypted, int key){
-        String print = Encrypted;
         String newString="";
         String symbols="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         char currentChar;
         int currentNum;
-        Encrypted=Encrypted.toUpperCase();
+        String print=Encrypted.toUpperCase();
         for(int i = 0; i < print.length(); i++)
         {
             currentChar = (print.charAt(i));
